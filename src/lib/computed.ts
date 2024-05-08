@@ -26,8 +26,9 @@ export function computed<T>(fn: () => T): ReadableSignalStore<T> {
 	})
 
 	function get() {
-		subscribers.track()
-		return getScope() ? signal!() : fn()
+		return subscribers.track(() => {
+			return signal ? signal() : fn()
+		})
 	}
 
 	return {

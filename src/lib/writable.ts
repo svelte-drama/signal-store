@@ -17,8 +17,9 @@ export function writable<T>(
 	})
 
 	function get() {
-		subscribers.track()
-		return s()
+		return subscribers.track(() => {
+			return s()
+		})
 	}
 	function set(value: T) {
 		s.set(value)

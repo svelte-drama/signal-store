@@ -20,6 +20,7 @@ function increment() {
 <h1>Home</h1>
 <p>
 	<a href="/about">About</a>
+	<a href="/derived">Derived</a>
 </p>
 
 <fieldset>
