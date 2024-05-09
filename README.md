@@ -33,7 +33,7 @@ type WritableSignalStore<T> = Writable<T> & {
 ### `readable`
 
 ```ts
-import { readable } from '@svelte-drama/signal-store
+import { readable } from '@svelte-drama/signal-store'
 
 const time = readable(new Date(), (set) => {
   // This function is not run until time has subscribers
@@ -56,7 +56,7 @@ console.log(time.value)
 ### `writable`
 
 ```ts
-import { writable } from '@svelte-drama/signal-store
+import { writable } from '@svelte-drama/signal-store'
 ```
 
 `writable` takes the same arguments as Svelte's [writable](https://svelte.dev/docs/svelte-store#readable). Additionally, the current value is available through `.value`.
@@ -68,11 +68,11 @@ function computed<T>(fn: () => T): ReadableSignalStore<T>
 ```
 
 ```ts
-import { computed, writable } from '@svelte-drama/signal-store
+import { computed, writable } from '@svelte-drama/signal-store'
 
 const count = writable(1)
 const doubled = computed(() => {
-  return count * 2
+  return count.value * 2
 })
 console.log(doubled.value) // 2
 

@@ -21,6 +21,7 @@ function increment() {
 <p>
 	<a href="/about">About</a>
 	<a href="/derived">Derived</a>
+	<a href="/map">Map</a>
 </p>
 
 <fieldset>
